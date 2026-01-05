@@ -1,5 +1,6 @@
 # Getting the event based on Event Id  4740 which is the id for lockout event
-# event is variable, Get-WinEvent gets and event, Filters by security log and log with id 4740 and lists max of 10 entries
+# event is variable, Get-WinEvent gets and event, 
+#Filters by security log and log with id 4740 and lists max of 1 entries
 $event = Get-WinEvent -MaxEvents 1 -FilterHashTable @{LogName="Security";Id=4740}
 
 $message = $event.message
