@@ -19,6 +19,8 @@ Leaking sensative information can be as easy as copying it from one place and pa
 
 ### datamasking.ps1
 
+This works in the same fashion as the clipboard_scan script but it masks data instead of replacing with a text. This is for reducing the number of false positives in a way that data would be copied, but improtant part would be redacted.
+
 ### lockout_script.ps1
 
 This script was meant to log when a person is locked out of their account on an enterprise device, if they enter a wrong password a number of times. This event would be recorded in Event Viewer with event ID 4740 and logs this event in an text file. The number of tries for correct password was set in Windows Group Policy. As the log in Event Viewer is not verbose, I logged an verbose version in a txt file.
