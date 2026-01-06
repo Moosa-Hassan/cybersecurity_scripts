@@ -9,9 +9,9 @@ For these scripts you will need powershell and you will have to enable running s
 
 Steps to enable running powershell scripts
 
-1- Open powershell as administrator
-2- Run the following command `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
-3- Run script as follows ./'script_name'.ps1
+1. Open powershell as administrator
+2. Run the following command `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+3. Run script as follows ./'script_name'.ps1
 
 ### clipboard_scan.ps1
 
