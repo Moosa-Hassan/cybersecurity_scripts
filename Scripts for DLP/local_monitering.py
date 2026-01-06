@@ -8,7 +8,7 @@ from PIL import Image
 
 class UploadFolderHandler(FileSystemEventHandler):
     def on_modified(self, event):
-        if not event.is_directory:
+        if not event.is_directory: # logs when file was changed
             print(f"File modified: {event.src_path}")
 
     def on_created(self, event):
@@ -28,7 +28,7 @@ class UploadFolderHandler(FileSystemEventHandler):
             
 
 # Path to monitor
-path = r"C:\Users\Moosa\Documents\intenship\Scripts for DLP\uploads"
+path = r"path to a folder"
 
 event_handler = UploadFolderHandler()
 observer = Observer()

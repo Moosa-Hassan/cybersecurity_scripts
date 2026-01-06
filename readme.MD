@@ -39,10 +39,16 @@ It is hard for an machine to see if a document is confidential or public if ther
 
 ### local_monitering.py
 
+This is a simple monitering of a local folder. Basically with watchdog we are observing the file and logging to console when a file is created or modified. I am also not allowing image files to exist in this folder.
+
 ### metadata_analaysis.py
+
+Sometimes files are stored with wrong extensions to bypass security policies set which only check at the extension level. This scripts goes a level furthur by checking the metadata of a file and comparing it with what metadata for a file extension should look like. If they do not match the file is probably corrupted or used as a means to bypass existing security policies.
 
 ### OCR_Detection.py
 
 Sometimes text data is in PDF or photo files, which makes search of sensative information on it hard. Hence we use an Optical Character Recognization (OCR) software to extract all text from files and check for keywords and regex match in that text.
 
 ### upload_monitering.py
+
+This is an script to moniter the upload box which appears whenever we click upload on an browser. Using windows GUI classes it sees if the document being uploaded is sensative. It checks sensativity by passing the path of the file to the OCR_Detection.py script. Usually in search bar the file name appears when we select an document, this script just erases that box to unselect the document. This is a slow script and can be bypassed if a person uploads quickly.
