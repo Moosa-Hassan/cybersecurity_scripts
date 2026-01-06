@@ -31,7 +31,11 @@ These scripts were made to more deeply understand how DLP softwares prevent data
 
 ### app_denylist.py
 
+Malicous actors or users themselves sometimes use apps not allowed to be used during work hours. Every app is stated as a process and its details can be fetched. Hence this script tries to prevent some apps from lauching by checking both their names and their hashes (as remaning a file and running it will bypass the script). The script kills any such process and sends a notification to user. The script also blocks using private mode of browsers.
+
 ### context_aware.py
+
+It is hard for an machine to see if a document is confidential or public if there is no lable of the document. Here we can leverage the use of an LLM to determine weather a PDF documnet is weather confidential (should not be shared), internal (can be shared only in company) or public (anyone can access). This scripts just tries to classify a document between those labeles. It is possible to train a supervised machine learning model for this purpose, but there is no data to train the model, hence I have used an LLM.
 
 ### local_monitering.py
 

@@ -6,7 +6,7 @@ from winotify import Notification # for alerts
 import hashlib # for hashing files
 
 TARGETS = ["notepad.exe","msiexec.exe"]
-TARGETS_WITH_ARGS = [["msedge.exe","inprivate"],["wireshark.exe","C:\\Users\\Moosa\\Documents\\picoctf\\dump.pcap","-r"]]
+TARGETS_WITH_ARGS = [["msedge.exe","inprivate"]]
 
 TARGET_HASHES = ["9F18169DEC88597AB59FF216B308A6C303F58814A545872A82966168E1AC616C","F87BF57756049015686B7769B5A8DB32026D310BF853E7D132424F7513FE316C","CF378B9BF51F692844584C3B2689D36DCB0CB8BD3769B122DACDF492A44CED1D","BAAAE8DD14A26D827E0E8E6CFD953858E0BB2E556D295543D0B1E3DB86FFAA13"]
 all_targets  = TARGETS + [t[0] for t in TARGETS_WITH_ARGS] # flatten list of targets with args to just exe names
