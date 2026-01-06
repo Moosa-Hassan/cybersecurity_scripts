@@ -4,8 +4,7 @@ import cv2
 # We need to tell the path to the execuatble as its not the default path
 pyt.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# uses open_cv library to load a image
-# Note : Have capability for checking rotated images, but not implemented here
+# uses cv2 library to load a image
 
 
 def get_text(image_path):
@@ -59,4 +58,4 @@ def main(image_path):
         return True
     return False
 
-# main(r"C:\Users\Moosa\Documents\Moosa Hassan Alvi.pdf")  # Example usage
+# main(<path to a file>)  # Example usage

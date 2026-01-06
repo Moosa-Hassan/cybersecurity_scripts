@@ -25,5 +25,20 @@ This works in the same fashion as the clipboard_scan script but it masks data in
 
 This script was meant to log when a person is locked out of their account on an enterprise device, if they enter a wrong password a number of times. This event would be recorded in Event Viewer with event ID 4740 and logs this event in an text file. The number of tries for correct password was set in Windows Group Policy. As the log in Event Viewer is not verbose, I logged an verbose version in a txt file.
 
-## Python Scripts
+## Python Scripts (Scripts for DLP(Data Loss Prevention))
 
+These scripts were made to more deeply understand how DLP softwares prevent data loss.
+
+### app_denylist.py
+
+### context_aware.py
+
+### local_monitering.py
+
+### metadata_analaysis.py
+
+### OCR_Detection.py
+
+Sometimes text data is in PDF or photo files, which makes search of sensative information on it hard. Hence we use an Optical Character Recognization (OCR) software to extract all text from files and check for keywords and regex match in that text.
+
+### upload_monitering.py
