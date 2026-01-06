@@ -15,10 +15,12 @@ Steps to enable running powershell scripts
 
 ### clipboard_scan.ps1
 
+Leaking sensative information can be as easy as copying it from one place and pasting it in another location. Any copied file is first stored in clipboard then pasted to the location. Hence, this scripts tries to prevent sharing of emails, credit card nubers and some copied text with keywords in an effort to stop leakage of data. The script will have check clipboard every second and if sensative information is detected, it will be replaced. This scripts will have false positives especially in sensative keyword match.
+
 ### datamasking.ps1
 
 ### lockout_script.ps1
 
-This script was meant to lockout a person out of their account on an enterprise device, if they enter a wrong password a number of times. This event would be recorded in Event Viewer with event ID 4740 and logs this event in an text file. The number of tries for correct password was set in Windows Group Policy. As the log in Event Viewer is not verbose, I logged an verbose version in a txt file.
+This script was meant to log when a person is locked out of their account on an enterprise device, if they enter a wrong password a number of times. This event would be recorded in Event Viewer with event ID 4740 and logs this event in an text file. The number of tries for correct password was set in Windows Group Policy. As the log in Event Viewer is not verbose, I logged an verbose version in a txt file.
 
 ## Python Scripts
